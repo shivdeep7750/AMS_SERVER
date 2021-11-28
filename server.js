@@ -2,8 +2,6 @@ const session = require('express-session');
 var express = require('express');
 var cors = require('cors');
 var app = express();
-//var databasename = "amtengage";
-var databasename = "WXkiWR6HQI";
 ////https://ms-attendancemonitor.herokuapp.com/CREATE TABLE faculty (Name VARCHAR(255), UID VARCHAR(255) PRIMARY KEY, Mobile VARCHAR(255), Email VARCHAR(255), Password VARCHAR(255), Batch VARCHAR(255))
 ////https://ms-attendancemonitor.herokuapp.com/INSERT%20INTO%20faculty%20VALUES%20(%22ADMIN%22,%22ADMIN%22,%20%227727884582%22,%20%222018kucp1048@iiitkota.ac.in%22,%20%2273acd9a5972130b75066c82595a1fae3%22)
 
@@ -17,14 +15,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(express.static(path.join(__dirname, 'www')));
 var mysql = require('mysql');
+
+// var con = mysql.createConnection({
+//   host: "remotemysql.com",
+//   user: "WXkiWR6HQI",
+//   password: "GrnjbgiN8B",
+//   database: "WXkiWR6HQI"
+// });
+
 var con = mysql.createConnection({
-  //host: "db4free.net",
-  host: "remotemysql.com",
-  //user: "root15",
-  user: "WXkiWR6HQI",
-  //password: "shivdeep",
-  password: "GrnjbgiN8B",
-  database: databasename
+  host: "db4free.net",
+  user: "root15",
+  password: "shivdeep",
+  database: "amtengage"
 });
 const uri = "mongodb+srv://server:server@cluster0.akdfp.mongodb.net/sessionsdb?retryWrites=true&w=majority";
 const MongoStore = require('connect-mongo');
