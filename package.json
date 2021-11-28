@@ -1,0 +1,25 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "attendance monitor",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-mongo": "^4.6.0",
+    "cors": "1.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12",
+    "mysql": "^2.18.1",
+    "pg": "^1.0.0",
+    "psql": "^0.0.1",
+    "nodemailer": "1.0.0"
+  }
+}
